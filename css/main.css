@@ -1,11 +1,50 @@
 #menu-button {
-	display: inline-block;
-	background-color: blue;
-	border: 5px solid black;
-	border-radius: 5px;
-	padding: 5px 10px;
 	position: fixed;
+	padding: 5px 10px;
+	background-color: #FFF;
+	border-radius: 5px;
 	top: 15px;
+	left: 15px;
+	z-index: 999;
+	transition: 0.3s ease;
 }
 
-#
+#menu-button.menu-open {
+	background-color: initial;
+	border: 3px solid #FFF;
+	color: #FFF;
+}
+
+.hidden {
+	display: none;
+}
+
+#menu {
+	position: fixed;
+	z-index: 998;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	background-color: tomato;
+	transform-origin: left;
+	transition: 0.5s ease;
+}
+
+#menu ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+#menu ul li {
+	padding: 5px;
+	font-size: 1.25rem;
+}
+
+#menu ul li:hover {
+	text-decoration: underline;
+}
+
+#menu.menu-collapsed {
+	width: 0;
+}
